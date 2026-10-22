@@ -3,7 +3,9 @@
 set -u
 run() {
   pnpm add react-native-svg@$1 react-native@$2 >/dev/null 2>&1
-  printf "%-8s RN %-7s %-20s → " "$1" "$2" "$3"
+  printf "%-8s RN %-7s %-20s → " \
+    "$(node -p "require('react-native-svg/package.json').version")" \
+    "$(node -p "require('react-native/package.json').version")" "$3"
   pnpm exec vite build --config $3 2>&1 | sed 's/\x1b\[[0-9;]*m//g' \
     | grep -oE "built in [0-9.]+m?s|\"TurboModuleRegistry\" is not exported|failed to resolve import \"[^\"]+\" from \"[^\"]*react-native-svg/[^\"]+\"" \
     | sed -E 's#from ".*react-native-svg/#from react-native-svg/#' | head -1
