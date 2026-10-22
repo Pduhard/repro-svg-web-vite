@@ -1,0 +1,7 @@
+packageExtensions:
+  react-native-svg@15.16.0:
+    dependencies:
+      "@react-native/assets-registry": 0.88.0
+
+patchedDependencies:
+  react-native-svg@15.16.0: patches/react-native-svg@15.16.0.patch

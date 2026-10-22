@@ -1,0 +1,7 @@
+diff --git a/lib/module/fabric/NativeSvgSoundModule.web.js b/lib/module/fabric/NativeSvgSoundModule.web.js
+new file mode 100644
+index 0000000..7646bbd
+--- /dev/null
++++ b/lib/module/fabric/NativeSvgSoundModule.web.js
+@@ -0,0 +1 @@
++export default null;
