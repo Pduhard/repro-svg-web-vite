@@ -7,7 +7,7 @@ settings:
 packageExtensionsChecksum: sha256-dAeN1aUVLzSJipHSlKDaw2/i7y0gbRhiQctT3327eCo=
 
 patchedDependencies:
-  react-native-svg@15.16.0: f9bfd868bbb859ab3152d0b1b0f1f471af4c15d5f68e12975a572f6e5429be93
+  react-native-svg@15.16.0: 3c1590bc862db7d39c49b7a6db4b1ba5303cf82f1ec2be6f10bcdf0613f392cc
 
 importers:
 
@@ -24,7 +24,7 @@ importers:
         version: 0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(react@19.2.3)(supports-color@8.1.1)
       react-native-svg:
         specifier: 15.16.0
-        version: 15.16.0(patch_hash=f9bfd868bbb859ab3152d0b1b0f1f471af4c15d5f68e12975a572f6e5429be93)(react-native@0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(react@19.2.3)(supports-color@8.1.1))(react@19.2.3)
+        version: 15.16.0(patch_hash=3c1590bc862db7d39c49b7a6db4b1ba5303cf82f1ec2be6f10bcdf0613f392cc)(react-native@0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(react@19.2.3)(supports-color@8.1.1))(react@19.2.3)
       react-native-web:
         specifier: 0.21.4
         version: 0.21.4(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -2241,7 +2241,7 @@ snapshots:
 
   react-is@18.3.1: {}
 
-  react-native-svg@15.16.0(patch_hash=f9bfd868bbb859ab3152d0b1b0f1f471af4c15d5f68e12975a572f6e5429be93)(react-native@0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(react@19.2.3)(supports-color@8.1.1))(react@19.2.3):
+  react-native-svg@15.16.0(patch_hash=3c1590bc862db7d39c49b7a6db4b1ba5303cf82f1ec2be6f10bcdf0613f392cc)(react-native@0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(react@19.2.3)(supports-color@8.1.1))(react@19.2.3):
     dependencies:
       '@react-native/assets-registry': 0.88.0(react-native@0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(react@19.2.3)(supports-color@8.1.1))
       css-select: 5.2.2

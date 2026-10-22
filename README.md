@@ -37,4 +37,4 @@ React Native 0.87 stopped depending on it, so nothing provides it. #3076 removed
 Branch [`with-fix`](../../tree/with-fix): `pnpm build` passes on 15.16.0 + React Native 0.88.0 with the default config, and the page renders the `<rect>` with no console error.
 
 - `@react-native/assets-registry` added to react-native-svg's `dependencies` (`packageExtensions` in `pnpm-workspace.yaml`).
-- A web stub `lib/module/fabric/NativeSvgSoundModule.web.js`: `export default null;` (`patches/`). Moving the touch-sound call into a `.android` file would do the same.
+- The touch sound moves out of `SvgTouchableMixin` into `lib/playTouchSound.android.js`, with a no-op `lib/playTouchSound.js` for iOS and web (`patches/`), the same split as `resolveAssetUri.ts` / `resolveAssetUri.web.ts`. The sound module stays out of the iOS and web graphs, and is never evaluated on iOS, as with today's lazy `require`.
