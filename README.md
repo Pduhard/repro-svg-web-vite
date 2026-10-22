@@ -20,17 +20,17 @@ pnpm build      # react-native-svg 15.16.0, react-native 0.88.0
 | 15.16.0 | 0.86.3 | `shimMissingExports` | ✓ |
 | 15.16.0 | 0.88.0 | `shimMissingExports` | ✗ cannot resolve `@react-native/assets-registry/registry` from `lib/resolveAssetUri.web.js` |
 
-## 1. `TurboModuleRegistry` on the web (#3086)
+## 1. `TurboModuleRegistry` on the web ([#3086](https://github.com/software-mansion/react-native-svg/issues/3086))
 
 New in 15.16.0. `lib/SvgTouchableMixin.js` requires `../fabric/NativeSvgSoundModule` inside an Android-only branch,
 but the bundler still follows it, and that file imports `TurboModuleRegistry`, which react-native-web does not export.
 Rolldown (Vite 8) fails on a missing export by default.
 
-## 2. `@react-native/assets-registry` is not declared (#3087)
+## 2. `@react-native/assets-registry` is not declared ([#3087](https://github.com/software-mansion/react-native-svg/issues/3087))
 
 `lib/resolveAssetUri.web.js` imports `@react-native/assets-registry/registry`, but react-native-svg does not list it in its dependencies.
 Up to React Native 0.86 it resolves through react-native's own dependency (pnpm hoists it into `node_modules/.pnpm/node_modules`).
-React Native 0.87 stopped depending on it, so nothing provides it. #3076 removed the import from the native path only.
+React Native 0.87 stopped depending on it, so nothing provides it. [#3076](https://github.com/software-mansion/react-native-svg/pull/3076) removed the import from the native path only.
 
 ## Fix
 
